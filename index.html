@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Portfolio</title>
+    <style>
+       
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%; /* Makes the image circular */
+    border: 5px solid #fff; /* Add a white border to the image */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+header {
+    background-color: #7cddf3;
+    color: #0a0a0a;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Style the navigation menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: underline;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Style the sections */
+section {
+    display: none;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Style the footer */
+footer {
+    background-color: #fdfdfe;
+    color: #080808;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+.content {
+    flex: 1;
+    overflow: auto;
+    margin-bottom: 60px;
+}
+/* Add more specific styles for h1, h2, h3, and other elements as needed */
+h1, h2, h3,h5 {
+    color: #333;
+}
+
+/* Add specific styles for links */
+a {
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+  
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DURGA C</h1>
+        <h5>IAM A STUDENT</h5>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact Information</a></li>
+        </ul>
+    </nav>
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="m.jpg" alt="Durga C" width="150" height="150">
+        <p>Hello! I"m Durga</p> 
+        <p>A final year student passionate about Computer Science.</p>
+        <p>I'm enthusiastic about learning and applying my knowledge to create innovative solutions.</p>
+        <p> My journey in Computer Science has been a rewarding experience.</p>
+        <p>I like to explore new things </p>
+        <p>Calm and Passionate</p>
+        <p>Hobbies
+            <ul>
+               <li>Drawing</li>
+               <li>Cooking</li>
+               <li>Embroidery</li>
+            </ul>
+        </p>
+        
+    </section>
+    <section id="education">
+        <h2><br>EDUCATION DETAILS</h2>
+        <ul>
+            <li>3rd yr B.Sc Computer science</li>
+            <li>Goverment Arts and science College for Women, Puliakulam</li>
+        </ul>
+        <sub><strong><u>SCHOOLING</u> </strong></sub>
+        <ul>
+            <li>HSC - Goverment Higher Secondary School, Othakkalmandapam</li>
+            <li>Course - Computer science</li>
+            <li>Percentage - 84.5%</li>
+            <li>SSLC - Goverment Higher Secondary School, Othakkalmandapam</li>
+            <li>Percentage - 77.6%</li>
+        </ul>
+    </section>
+        <section id="skills" class="skills-section">
+            <h2>Skills</h2>
+            <div class="Skill">
+                <h4>C</h4>
+                <progress value="80" max="100"></progress>
+                <span>80%</span>
+            </div>
+                <div class="Skill">
+                    <h4>C++</h4>
+                    <progress value="80" max="100"></progress>
+                    <span>80%</span>
+                </div>
+            <div class="Skill">
+                <h4>Java</h4>
+                <progress value="50" max="100"></progress>
+                <span>50%</span>
+            </div>
+                <div class="Skill">
+                    <h4>Microsoft</h4>
+                    <progress value="75" max="100"></progress>
+                    <span>75%</span>
+                </div>
+        </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:durgasekar388@gmail.com">durgasekar388@gmail.com</a></p>
+            <p>phone: +91 9384935224</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/durga-sekar-117083286">linkedin.com/in/durga-sekar-117083286</a></p>
+            <p>Download Resume: <a href="C:\NAN MUDHALVAN\resume" download>Click here</a></p>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <p><br>Contact me at: durgasekar388@gmail.com</p>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/durga-sekar-117083286">LinkedIn</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        const navLinks = document.querySelectorAll('nav a');
+        const sections = document.querySelectorAll('section');
+
+        navLinks.forEach((link) => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                sections.forEach((section) => {
+                    section.style.display = 'none';
+                });
+
+                const targetId = link.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                targetSection.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
